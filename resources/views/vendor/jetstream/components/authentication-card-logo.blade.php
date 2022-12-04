@@ -1,0 +1,2 @@
+<div style="background-color:white;width: 300px; height: 80px;text-align: center;padding-left:30px;border-radius:10px;border-width:thick;border-color:#fb5849" ><img src="assets/images/klassy-logo.png" style="width:200px;"align="klassy cafe html template">
+</div>

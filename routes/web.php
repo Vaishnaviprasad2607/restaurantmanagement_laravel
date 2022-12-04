@@ -17,15 +17,11 @@ use App\Http\Controllers\NewsController;
 |
 */
 
-Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified'
-])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
 });
+
 Route::get("/",[HomeController::class,'index']);
 Route::get("/user",[HomeController::class,'redirect']);
 
@@ -46,7 +42,7 @@ Route::get('/edit-slider/{id}',[SliderController::class,'edit']);
 Route::put('/update-slider/{id}',[SliderController::class,'update']);
 
 
-Route::get("/redirect",[HomeController::class,'redirect'])->middleware('auth','verified');
+Route::get("/redirect", [HomeController::class, 'redirect']);
 Route::get("/contact",[HomeController::class,'contact']);
 Route::get("/parallax",[HomeController::class,'parallax']);
 
